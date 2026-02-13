@@ -1,0 +1,835 @@
+{
+  "file_name": "플러스엑스 정산서 - 시트 공유자 _ 패캠 김수양, 이정민, 권은혜 & 플엑 황준식 디렉터님.xlsx",
+  "total_sheets": 84,
+  "total_groups": 25,
+  "groups": [
+    {
+      "group_id": 11,
+      "column_count": 8,
+      "sample_columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7"
+      ],
+      "sheet_count": 26,
+      "sheets": [
+        {
+          "sheet_name": "25.4_광고(플엑)",
+          "row_count": 52
+        },
+        {
+          "sheet_name": "25.3_광고(플엑)",
+          "row_count": 53
+        },
+        {
+          "sheet_name": "25.2_광고(플엑)",
+          "row_count": 50
+        },
+        {
+          "sheet_name": "25.1_광고(플엑)",
+          "row_count": 55
+        },
+        {
+          "sheet_name": "24.12_광고(플엑)",
+          "row_count": 55
+        },
+        {
+          "sheet_name": "24.11_광고(플엑)",
+          "row_count": 55
+        },
+        {
+          "sheet_name": "24.10_광고(플엑)",
+          "row_count": 56
+        },
+        {
+          "sheet_name": "24.9_광고(플엑)",
+          "row_count": 55
+        },
+        {
+          "sheet_name": "24.8_광고(플엑)",
+          "row_count": 56
+        },
+        {
+          "sheet_name": "24.7_광고(플엑)",
+          "row_count": 56
+        },
+        {
+          "sheet_name": "24.6_광고(플엑)",
+          "row_count": 55
+        },
+        {
+          "sheet_name": "24.5_광고(플엑)",
+          "row_count": 56
+        },
+        {
+          "sheet_name": "24.4_광고(플엑)",
+          "row_count": 55
+        },
+        {
+          "sheet_name": "24.3_광고(플엑)",
+          "row_count": 50
+        },
+        {
+          "sheet_name": "24.2_광고(플엑)",
+          "row_count": 49
+        },
+        {
+          "sheet_name": "24.1_광고(플엑)",
+          "row_count": 53
+        },
+        {
+          "sheet_name": "24.1_광고(허스키)",
+          "row_count": 53
+        },
+        {
+          "sheet_name": "23.12_광고",
+          "row_count": 53
+        },
+        {
+          "sheet_name": "23.11_광고",
+          "row_count": 52
+        },
+        {
+          "sheet_name": "23.10_광고",
+          "row_count": 53
+        },
+        {
+          "sheet_name": "23.09_광고",
+          "row_count": 52
+        },
+        {
+          "sheet_name": "23.08_광고",
+          "row_count": 53
+        },
+        {
+          "sheet_name": "23.07_광고",
+          "row_count": 55
+        },
+        {
+          "sheet_name": "23.06_광고",
+          "row_count": 54
+        },
+        {
+          "sheet_name": "23.05_광고",
+          "row_count": 51
+        },
+        {
+          "sheet_name": "23.04_광고",
+          "row_count": 50
+        }
+      ]
+    },
+    {
+      "group_id": 20,
+      "column_count": 9,
+      "sample_columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8"
+      ],
+      "sheet_count": 14,
+      "sheets": [
+        {
+          "sheet_name": "24.1_정산(실비)",
+          "row_count": 65
+        },
+        {
+          "sheet_name": "23.12_정산(실비)",
+          "row_count": 93
+        },
+        {
+          "sheet_name": "23.4Q_정산(기존방식)_통합",
+          "row_count": 104
+        },
+        {
+          "sheet_name": "23.11_정산(실비)",
+          "row_count": 60
+        },
+        {
+          "sheet_name": "23.10_정산(실비)",
+          "row_count": 59
+        },
+        {
+          "sheet_name": "23.3Q_정산(기존방식)_통합",
+          "row_count": 102
+        },
+        {
+          "sheet_name": "23.08_정산(실비최대30%)",
+          "row_count": 65
+        },
+        {
+          "sheet_name": "23.07_정산(기존방식)",
+          "row_count": 70
+        },
+        {
+          "sheet_name": "23.0405_정산(통합)",
+          "row_count": 101
+        },
+        {
+          "sheet_name": "23.06_정산(실제광고비)",
+          "row_count": 69
+        },
+        {
+          "sheet_name": "23.06_정산(기존방식)",
+          "row_count": 69
+        },
+        {
+          "sheet_name": "23.06_정산(기존방식)_통합",
+          "row_count": 96
+        },
+        {
+          "sheet_name": "23.05_정산",
+          "row_count": 69
+        },
+        {
+          "sheet_name": "23.04_정산",
+          "row_count": 67
+        }
+      ]
+    },
+    {
+      "group_id": 10,
+      "column_count": 10,
+      "sample_columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9"
+      ],
+      "sheet_count": 13,
+      "sheets": [
+        {
+          "sheet_name": "25.4_정산(실비)",
+          "row_count": 81
+        },
+        {
+          "sheet_name": "25.3_정산(실비)",
+          "row_count": 81
+        },
+        {
+          "sheet_name": "25.2_정산(실비)",
+          "row_count": 80
+        },
+        {
+          "sheet_name": "25.1_정산(실비)",
+          "row_count": 80
+        },
+        {
+          "sheet_name": "24.12_정산(실비)",
+          "row_count": 79
+        },
+        {
+          "sheet_name": "24.11_정산(실비)",
+          "row_count": 79
+        },
+        {
+          "sheet_name": "24.10_정산(실비)",
+          "row_count": 78
+        },
+        {
+          "sheet_name": "24.9_정산(실비)",
+          "row_count": 81
+        },
+        {
+          "sheet_name": "24.8_정산(실비)",
+          "row_count": 80
+        },
+        {
+          "sheet_name": "24.7_정산(실비)",
+          "row_count": 77
+        },
+        {
+          "sheet_name": "24.6_정산(실비)",
+          "row_count": 71
+        },
+        {
+          "sheet_name": "24.5_정산(실비)_수정완료",
+          "row_count": 69
+        },
+        {
+          "sheet_name": "24.4_정산(실비)_수정예정",
+          "row_count": 70
+        }
+      ]
+    },
+    {
+      "group_id": 4,
+      "column_count": 11,
+      "sample_columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9",
+        "Unnamed: 10"
+      ],
+      "sheet_count": 4,
+      "sheets": [
+        {
+          "sheet_name": "25.10_정산(실비)",
+          "row_count": 96
+        },
+        {
+          "sheet_name": "25.7_정산(실비)",
+          "row_count": 93
+        },
+        {
+          "sheet_name": "25.6_정산(실비)",
+          "row_count": 87
+        },
+        {
+          "sheet_name": "25.5_정산(실비)",
+          "row_count": 86
+        }
+      ]
+    },
+    {
+      "group_id": 12,
+      "column_count": 9,
+      "sample_columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8"
+      ],
+      "sheet_count": 4,
+      "sheets": [
+        {
+          "sheet_name": "25.1Q_정산(실비)_통합",
+          "row_count": 77
+        },
+        {
+          "sheet_name": "24.4Q_정산(실비)_통합",
+          "row_count": 75
+        },
+        {
+          "sheet_name": "24.3Q_정산(실비)_통합",
+          "row_count": 73
+        },
+        {
+          "sheet_name": "24.2Q_정산(실비)_통합",
+          "row_count": 67
+        }
+      ]
+    },
+    {
+      "group_id": 3,
+      "column_count": 11,
+      "sample_columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9",
+        "Unnamed: 10"
+      ],
+      "sheet_count": 3,
+      "sheets": [
+        {
+          "sheet_name": "26.1_정산(실비)",
+          "row_count": 93
+        },
+        {
+          "sheet_name": "25.12_정산(실비)",
+          "row_count": 92
+        },
+        {
+          "sheet_name": "25.11_정산(실비)",
+          "row_count": 91
+        }
+      ]
+    },
+    {
+      "group_id": 5,
+      "column_count": 11,
+      "sample_columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9",
+        "Unnamed: 10"
+      ],
+      "sheet_count": 2,
+      "sheets": [
+        {
+          "sheet_name": "25.9_정산(실비)",
+          "row_count": 123
+        },
+        {
+          "sheet_name": "23.09_정산(실비)",
+          "row_count": 68
+        }
+      ]
+    },
+    {
+      "group_id": 1,
+      "column_count": 19,
+      "sample_columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9",
+        "Unnamed: 10",
+        "Unnamed: 11",
+        "Unnamed: 12",
+        "Unnamed: 13",
+        "Unnamed: 14",
+        "Unnamed: 15",
+        "Unnamed: 16",
+        "Unnamed: 17",
+        "Unnamed: 18"
+      ],
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "24.01_정산(실비)_준식Test",
+          "row_count": 74
+        }
+      ]
+    },
+    {
+      "group_id": 2,
+      "column_count": 11,
+      "sample_columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9",
+        "Unnamed: 10"
+      ],
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "시트10",
+          "row_count": 47
+        }
+      ]
+    },
+    {
+      "group_id": 6,
+      "column_count": 10,
+      "sample_columns": [
+        "실거래액",
+        "33828200",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "3) 컨퍼런스에 집행된 광고비(₩11,558,686) 를 제외한 광고비를 기준으로 정산서를 작성하였습니다.",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9"
+      ],
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "2025 Share X 컨퍼런스 제작비",
+          "row_count": 69
+        }
+      ]
+    },
+    {
+      "group_id": 7,
+      "column_count": 11,
+      "sample_columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9",
+        "Unnamed: 10"
+      ],
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "25.8_정산(실비)",
+          "row_count": 83
+        }
+      ]
+    },
+    {
+      "group_id": 8,
+      "column_count": 8,
+      "sample_columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7"
+      ],
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "25.6_광고(플엑)",
+          "row_count": 22
+        }
+      ]
+    },
+    {
+      "group_id": 9,
+      "column_count": 12,
+      "sample_columns": [
+        "NO.",
+        "과정명",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "기업",
+        "B2C 최초 판매가",
+        "B2B 할인율",
+        "B2B 판매가",
+        "Unnamed: 9",
+        "상품",
+        "B2B 할인가"
+      ],
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "쉐어엑스 B2B 판매리스트&할인율",
+          "row_count": 29
+        }
+      ]
+    },
+    {
+      "group_id": 13,
+      "column_count": 10,
+      "sample_columns": [
+        "실거래액",
+        "33828200",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "3) 컨퍼런스에 집행된 광고비(₩11,558,686) 를 제외한 광고비를 기준으로 정산서를 작성하였습니다.",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9"
+      ],
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "Share X 컨퍼런스 제작비",
+          "row_count": 63
+        }
+      ]
+    },
+    {
+      "group_id": 14,
+      "column_count": 16,
+      "sample_columns": [
+        "정산월",
+        "코스\n 아이디",
+        "카테고리",
+        "강의명",
+        "강사명",
+        "마케팅\n 비용",
+        "금융수수료",
+        "마케팅+\n 금융수수료",
+        "R/S",
+        "매출",
+        "번들",
+        "총 매출",
+        "마케팅비용",
+        "공헌이익",
+        "수익쉐어강사료",
+        "Unnamed: 15"
+      ],
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "9월 정산내역(수양 재계산)",
+          "row_count": 37
+        }
+      ]
+    },
+    {
+      "group_id": 15,
+      "column_count": 10,
+      "sample_columns": [
+        " ",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9"
+      ],
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "24.3_정산(실비)",
+          "row_count": 68
+        }
+      ]
+    },
+    {
+      "group_id": 16,
+      "column_count": 9,
+      "sample_columns": [
+        " ",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8"
+      ],
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "24.1Q_정산(실비)_통합",
+          "row_count": 137
+        }
+      ]
+    },
+    {
+      "group_id": 17,
+      "column_count": 10,
+      "sample_columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9"
+      ],
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "24.2_정산(실비)FC_마케팅비수정(소라수양)",
+          "row_count": 76
+        }
+      ]
+    },
+    {
+      "group_id": 18,
+      "column_count": 9,
+      "sample_columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8"
+      ],
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "24.2_정산(실비)FC(수양)",
+          "row_count": 76
+        }
+      ]
+    },
+    {
+      "group_id": 19,
+      "column_count": 12,
+      "sample_columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9",
+        "Unnamed: 10",
+        "Unnamed: 11"
+      ],
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "24.2_정산(실비)-플러스엑스 확인중(황준식 디렉터)",
+          "row_count": 163
+        }
+      ]
+    },
+    {
+      "group_id": 21,
+      "column_count": 9,
+      "sample_columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8"
+      ],
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "24.1_정산(허스키)",
+          "row_count": 43
+        }
+      ]
+    },
+    {
+      "group_id": 22,
+      "column_count": 10,
+      "sample_columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9"
+      ],
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "23.09_환급매출",
+          "row_count": 71
+        }
+      ]
+    },
+    {
+      "group_id": 23,
+      "column_count": 9,
+      "sample_columns": [
+        "Unnamed: 0",
+        "일자별",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8"
+      ],
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "시트8",
+          "row_count": 51
+        }
+      ]
+    },
+    {
+      "group_id": 24,
+      "column_count": 9,
+      "sample_columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8"
+      ],
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "시트7",
+          "row_count": 53
+        }
+      ]
+    },
+    {
+      "group_id": 25,
+      "column_count": 14,
+      "sample_columns": [
+        "Unnamed: 0",
+        "Unnamed: 1",
+        "Unnamed: 2",
+        "Unnamed: 3",
+        "Unnamed: 4",
+        "Unnamed: 5",
+        "Unnamed: 6",
+        "Unnamed: 7",
+        "Unnamed: 8",
+        "Unnamed: 9",
+        "Unnamed: 10",
+        "Unnamed: 11",
+        "Unnamed: 12",
+        "Unnamed: 13"
+      ],
+      "sheet_count": 1,
+      "sheets": [
+        {
+          "sheet_name": "23.04-05_광고(통합)",
+          "row_count": 110
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# PDF files (업로드된 정산서 및 생성된 파일)
+*.pdf
+uploads/
+output/
+
+# Archive (원본 정산 데이터 - 비즈니스 민감 정보)
+archive/
+
+# Archive data (로컬 JSON 저장소)
+data/archive/*.json
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+
+# SMTP credentials (sensitive)
+config/smtp_config.json
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Next.js
+web/dashboard/.next/
+web/dashboard/out/
+web/dashboard/build/
+.vercel
+
+# IDE & Tools
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+/tmp/
+fastapi.log
+
+# Temporary files
+*.tmp
+temp/
+tmp/
+final_output.txt
+final_v2.txt
+test_output.txt
+test_output_v2.txt
+
+# Keep directory structure but ignore contents
+!data/archive/.gitkeep
+!uploads/.gitkeep
+!output/.gitkeep
