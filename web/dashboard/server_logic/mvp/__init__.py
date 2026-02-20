@@ -7,7 +7,7 @@ MVP 파이프라인 모듈
 3. 기업별 정산서 PDF 생성
 """
 
-from .pdf_extractor import extract_pdf_data
+from server_logic.mvp.pdf_extractor import extract_pdf_data
 
 __all__ = [
     'extract_pdf_data',

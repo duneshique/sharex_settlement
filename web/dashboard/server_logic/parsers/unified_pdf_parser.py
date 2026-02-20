@@ -21,7 +21,7 @@ from difflib import SequenceMatcher
 
 import pdfplumber
 
-from .base import (
+from server_logic.parsers.base import (
     CourseSettlementRow,
     ParsedSettlementData,
     clean_numeric,
@@ -29,7 +29,7 @@ from .base import (
     get_course_company_id,
     normalize_course_name,
 )
-from .fastcampus_pdf import parse_quarterly_pdf
+from server_logic.parsers.fastcampus_pdf import parse_quarterly_pdf
 
 
 def parse_settlement_pdf_unified(

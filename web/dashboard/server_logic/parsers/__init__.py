@@ -1,6 +1,6 @@
 """Share X 정산 파서 패키지"""
 
-from .base import (
+from server_logic.parsers.base import (
     CourseSales,
     CampaignCost,
     CourseSettlementRow,

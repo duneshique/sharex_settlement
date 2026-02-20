@@ -15,7 +15,7 @@ from typing import List, Optional, Tuple
 
 import pdfplumber
 
-from .base import (
+from server_logic.parsers.base import (
     CampaignCost,
     CourseSales,
     CourseSettlementRow,

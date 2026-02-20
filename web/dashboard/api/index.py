@@ -10,6 +10,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from supabase import create_client, Client
 
+import sys
+from pathlib import Path
+
 # Vercel 환경에서 경로 설정
 BASE_PATH = Path(__file__).parent.parent
 if str(BASE_PATH) not in sys.path:
