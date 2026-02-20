@@ -12,15 +12,13 @@ from supabase import create_client, Client
 
 # Vercel 환경에서 경로 설정
 BASE_PATH = Path(__file__).parent.parent
-LOGIC_PATH = BASE_PATH / "server_logic"
+if str(BASE_PATH) not in sys.path:
+    sys.path.insert(0, str(BASE_PATH))
 
-import sys
-sys.path.insert(0, str(LOGIC_PATH))
-
-# ShareX 모듈 import (복사된 경로 기준)
-from mvp.pdf_extractor import extract_pdf_data
-from mvp.settlement_calculator import calculate_settlements
-from api.email_service import EmailService
+# ShareX 모듈 import (절대 경로 기준)
+from server_logic.mvp.pdf_extractor import extract_pdf_data
+from server_logic.mvp.settlement_calculator import calculate_settlements
+from server_logic.api.email_service import EmailService
 
 app = FastAPI()
 

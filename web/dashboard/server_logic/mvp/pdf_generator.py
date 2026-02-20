@@ -312,7 +312,7 @@ def _build_courses_table_rows(
 
     if has_monthly:
         # 월별 그룹핑
-        from ..parsers.base import parse_quarter_months
+        from server_logic.parsers.base import parse_quarter_months
         months = parse_quarter_months(period)
 
         for month in months:

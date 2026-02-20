@@ -9,9 +9,9 @@ import json
 from pathlib import Path
 from typing import Dict, List, Any
 
-from ..parsers.fastcampus_pdf import parse_quarterly_pdf, parse_monthly_pdf, detect_period_from_filename
-from ..parsers.unified_pdf_parser import parse_settlement_pdf_unified
-from ..parsers.base import ParsedSettlementData, CourseSettlementRow, CourseSales, parse_quarter_months
+from server_logic.parsers.fastcampus_pdf import parse_quarterly_pdf, parse_monthly_pdf, detect_period_from_filename
+from server_logic.parsers.unified_pdf_parser import parse_settlement_pdf_unified
+from server_logic.parsers.base import ParsedSettlementData, CourseSettlementRow, CourseSales, parse_quarter_months
 
 
 def extract_pdf_data(pdf_path: str, base_path: str = None) -> Dict[str, Any]:
