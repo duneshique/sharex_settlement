@@ -12,6 +12,7 @@ import {
     type ApprovalStatus,
 } from "@/lib/api";
 import { formatCurrency } from "@/lib/format";
+import UploadZone from "@/components/UploadZone";
 
 const SESSION_KEY = "settlementData";
 
@@ -40,7 +41,7 @@ export default function SettlementListPage() {
                 if (parsed.period) {
                     getApprovalStatus(parsed.period)
                         .then(setApprovalStatus)
-                        .catch(() => {});
+                        .catch(() => { });
                 }
             } catch { /* ignore */ }
         }
@@ -89,7 +90,7 @@ export default function SettlementListPage() {
             // 저장 후 승인 상태 새로고침
             getApprovalStatus(data.period)
                 .then(setApprovalStatus)
-                .catch(() => {});
+                .catch(() => { });
         } catch (err) {
             setError(err instanceof Error ? err.message : "저장 실패");
         } finally {
@@ -204,14 +205,6 @@ export default function SettlementListPage() {
                 </div>
             )}
 
-            {/* 로딩 상태 */}
-            {isUploading && (
-                <div className="border-2 border-dashed border-blue-200 rounded-[2px] p-20 text-center bg-blue-50">
-                    <div className="text-[15px] font-medium text-blue-600 mb-2">분석 중...</div>
-                    <div className="text-[13px] text-blue-500">PDF를 파싱하고 정산을 계산하는 중입니다. (최대 60초)</div>
-                </div>
-            )}
-
             {/* 기업별 테이블 */}
             {!isUploading && companyList.length > 0 ? (
                 <div className="bg-white border-t-2 border-black">
@@ -271,12 +264,9 @@ export default function SettlementListPage() {
                         </div>
                     )}
                 </div>
-            ) : !isUploading ? (
-                <div className="border-2 border-dashed border-gray-200 rounded-[2px] p-20 text-center">
-                    <div className="text-[15px] font-medium mb-2">정산 데이터가 없습니다</div>
-                    <div className="text-[13px] text-gray-400">상단의 "정산서 업로드" 버튼을 클릭하여 쉐어엑스 정산서 PDF를 업로드하세요.</div>
-                </div>
-            ) : null}
+            ) : (
+                <UploadZone onFileSelect={handleUpload} isLoading={isUploading} />
+            )}
 
             {/* 일괄 이메일 발송 모달 */}
             {showEmailModal && data && (
@@ -379,11 +369,10 @@ function BulkEmailModal({
                                 return (
                                     <div key={companyId} className="flex justify-between items-center py-2 border-b border-gray-100">
                                         <span className="text-[13px]">{company?.company || companyId}</span>
-                                        <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
-                                            status === "sent"
+                                        <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${status === "sent"
                                                 ? "bg-green-100 text-green-700"
                                                 : "bg-red-100 text-red-700"
-                                        }`}>
+                                            }`}>
                                             {status === "sent" ? "발송 완료" : status}
                                         </span>
                                     </div>
@@ -416,9 +405,8 @@ function BulkEmailModal({
                                         return (
                                             <label
                                                 key={company.id}
-                                                className={`flex items-center gap-3 p-3 rounded-[2px] transition-colors ${
-                                                    hasEmail ? "hover:bg-gray-50 cursor-pointer" : "opacity-50 cursor-not-allowed"
-                                                }`}
+                                                className={`flex items-center gap-3 p-3 rounded-[2px] transition-colors ${hasEmail ? "hover:bg-gray-50 cursor-pointer" : "opacity-50 cursor-not-allowed"
+                                                    }`}
                                             >
                                                 <input
                                                     type="checkbox"
