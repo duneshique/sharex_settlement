@@ -65,7 +65,7 @@ export default function UploadZone({ onFileSelect, isLoading }: UploadZoneProps)
       />
       <div className="text-4xl mb-4">&#128196;</div>
       <p className="text-sm font-medium mb-1">
-        패스트캠퍼스 정산서 PDF를 드래그하거나 클릭하여 업로드
+        쉐어엑스 정산서 PDF를 드래그하거나 클릭하여 업로드
       </p>
       <p className="text-xs text-gray-400">
         분기별 정산서 PDF 파일 (예: [패스트캠퍼스] Share X 정산서 - 2024년 4Q.pdf)
