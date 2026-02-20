@@ -1,0 +1,132 @@
+{
+  "classification_rules": {
+    "target_mapping": {
+      "SHARE X": {
+        "type": "indirect",
+        "description": "통합 광고 - 전체 강의 수로 균등 안분",
+        "apportionment": "equal_by_course_count",
+        "note": "모든 회사의 강의를 합산한 총 강의 수로 나누어 배분"
+      },
+      "PLUS X": {
+        "type": "direct",
+        "company_id": "plusx",
+        "description": "플러스엑스 직접광고비",
+        "course_count": 24.0
+      },
+      "BKID": {
+        "type": "direct",
+        "company_id": "bkid",
+        "description": "BKID 직접광고비"
+      },
+      "BLSN": {
+        "type": "direct",
+        "company_id": "blsn",
+        "description": "블센 직접광고비"
+      },
+      "SANDOLL": {
+        "type": "direct",
+        "company_id": "sandoll",
+        "description": "산돌 직접광고비"
+      },
+      "SABUM": {
+        "type": "direct",
+        "company_id": "sabum",
+        "description": "변사범 고문님 직접광고비"
+      }
+    },
+    "campaign_patterns": [
+      {
+        "pattern": "쉐어엑스|Share X|SHARE X|SA_",
+        "default_target": "SHARE X",
+        "category": "통합광고"
+      },
+      {
+        "pattern": "플러스|PLUS|IP_",
+        "default_target": "PLUS X",
+        "category": "플러스엑스"
+      },
+      {
+        "pattern": "BKID|비케이아이디|DA_",
+        "default_target": "BKID",
+        "category": "BKID"
+      },
+      {
+        "pattern": "산돌|SANDOLL",
+        "default_target": "SANDOLL",
+        "category": "산돌"
+      },
+      {
+        "pattern": "블센|BLSN",
+        "default_target": "BLSN",
+        "category": "블센"
+      },
+      {
+        "pattern": "변사범|사범|sabum",
+        "default_target": "SABUM",
+        "category": "변사범"
+      }
+    ]
+  },
+  "channels": [
+    "Google",
+    "Meta",
+    "Naver"
+  ],
+  "apportionment_formula": {
+    "description": "광고비 = 총 광고비 A ÷ 전체 강의 수 B × 해당 기업 강의 수 C",
+    "formula": "company_ad_cost = total_ad_cost / total_courses * company_courses",
+    "note": "간접광고(SHARE X)는 이 공식으로 각 기업에 배분. 직접광고는 100% 해당 기업 귀속"
+  },
+  "course_count": {
+    "plusx_courses": 22.0,
+    "sabum_courses": 3.0,
+    "union_courses": 15.0,
+    "total_courses": 40.0,
+    "note": "시기별 변동 가능"
+  },
+  "exchange_rates": {
+    "2024-10": 1361.0,
+    "2024-11": 1393.38,
+    "2024-12": 1434.42,
+    "2025-01": 1455.79,
+    "2025-02": 1445.56,
+    "2025-03": 1456.95
+  },
+  "unique_ad_targets": [
+    "BKID",
+    "BLSN",
+    "PLUS X",
+    "SANDOLL",
+    "SHARE X"
+  ],
+  "unique_campaign_names": [
+    "2T_쉐어엑스_BKID_AI활용 제품디자인_전환",
+    "2T_쉐어엑스_BKID_AI활용 제품디자인_트래픽",
+    "ASC_쉐어엑스^100008 캠페인",
+    "DA_[쉐어엑스] BKID 9단계 AI 제품 디자인",
+    "IP 프로모션_쉐어엑스 Career Pass_트래픽",
+    "IP 프로모션_쉐어엑스_트래픽",
+    "IP_쉐어엑스_BLSN_디자인 법률_전환",
+    "IP_쉐어엑스_산돌_전환",
+    "IP_쉐어엑스_전환(리타게팅)",
+    "IP_쉐어엑스_플러스엑스_AI활용 BX_전환",
+    "Instagram - 2T_쉐어엑스_BKID_AI활용 제품디자인_전환",
+    "Instagram - 2T_쉐어엑스_BKID_AI활용 제품디자인_트래픽",
+    "Instagram - ASC_쉐어엑스^100008 캠페인",
+    "Instagram - IP 프로모션_쉐어엑스 Career Pass_트래픽",
+    "Instagram - IP 프로모션_쉐어엑스_트래픽",
+    "Instagram - IP_쉐어엑스_BLSN_디자인 법률_전환",
+    "Instagram - IP_쉐어엑스_산돌_전환",
+    "Instagram - IP_쉐어엑스_전환(리타게팅)",
+    "Instagram - IP_쉐어엑스_플러스엑스_AI활용 BX_전환",
+    "SA_쉐어엑스_자상호",
+    "검색 광고"
+  ],
+  "metadata": {
+    "source": "Share X Settlement_Info.xlsx > 정산서(논리), 광고비 사용내역",
+    "extracted_at": "2026-02-09 09:35:59",
+    "total_unique_targets": 5,
+    "total_unique_campaigns": 21,
+    "total_unique_channels": 3
+  }
+}
