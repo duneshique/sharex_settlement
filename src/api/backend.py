@@ -8,6 +8,7 @@ ShareX 정산 시스템 - FastAPI 백엔드
 4. 최종 승인 → PDF 생성 → 이메일 발송
 """
 
+import os
 import json
 import asyncio
 import uuid
@@ -20,6 +21,7 @@ from fastapi.responses import JSONResponse, FileResponse, StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import uvicorn
+from supabase import create_client, Client
 
 # ShareX 모듈 import
 import sys
@@ -40,11 +42,23 @@ app = FastAPI(
 # CORS 설정 (웹 UI 접근 허용)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:3001", "http://localhost:8080"],
+    allow_origins=["*"],  # 배포 환경을 위해 모든 오리진 허용
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Supabase 설정
+SUPABASE_URL = os.environ.get("SUPABASE_URL")
+SUPABASE_KEY = os.environ.get("SUPABASE_KEY")
+supabase: Optional[Client] = None
+
+if SUPABASE_URL and SUPABASE_KEY:
+    try:
+        supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+        print("✅ Supabase 클라이언트 초기화 완료")
+    except Exception as e:
+        print(f"❌ Supabase 초기화 실패: {e}")
 
 # 설정
 BASE_PATH = Path(__file__).parent.parent.parent
@@ -375,13 +389,25 @@ async def save_archive(request: SaveArchiveRequest) -> Dict[str, Any]:
             "email_log": existing_email_log,
         }
 
-        with open(archive_file, "w", encoding="utf-8") as f:
-            json.dump(archive_data, f, ensure_ascii=False, indent=2)
+        if supabase:
+            try:
+                # DB 저장 (upsert)
+                supabase.table("archives").upsert({
+                    "period": request.period,
+                    "saved_at": archive_data["saved_at"],
+                    "data": archive_data,
+                    "total_settlement": request.summary.get("total_settlement", 0),
+                    "company_count": len(request.companies)
+                }).execute()
+                print(f"✅ Supabase DB에 아카이브 저장 완료: {request.period}")
+            except Exception as e:
+                print(f"⚠️ Supabase 저장 실패 (로컬 저장은 완료): {e}")
 
         return {
             "status": "saved",
             "period": request.period,
             "file": str(archive_file),
+            "database": "synced" if supabase else "local_only",
             "saved_at": archive_data["saved_at"],
         }
 
@@ -391,8 +417,20 @@ async def save_archive(request: SaveArchiveRequest) -> Dict[str, Any]:
 
 @app.get("/api/archive/list")
 async def list_archives() -> Dict[str, Any]:
-    """저장된 아카이브 목록 조회"""
+    """저장된 아카이브 목록 조회 (Supabase 우선, 로컬 보조)"""
     archives = []
+    
+    # 1. Supabase에서 먼저 조회
+    if supabase:
+        try:
+            response = supabase.table("archives").select("period, saved_at, company_count, total_settlement").order("saved_at", desc=True).execute()
+            archives = response.data
+            if archives:
+                return {"archives": archives, "count": len(archives), "source": "database"}
+        except Exception as e:
+            print(f"⚠️ Supabase 목록 조회 실패: {e}")
+
+    # 2. 로컬 파일 보조 (Supabase 실패 시)
     for f in sorted(ARCHIVE_DIR.glob("*.json"), reverse=True):
         try:
             with open(f, "r", encoding="utf-8") as fh:
@@ -409,12 +447,22 @@ async def list_archives() -> Dict[str, Any]:
         except Exception:
             continue
 
-    return {"archives": archives, "count": len(archives)}
+    return {"archives": archives, "count": len(archives), "source": "local"}
 
 
 @app.get("/api/archive/{period}")
 async def get_archive(period: str) -> Dict[str, Any]:
-    """특정 기간의 아카이브 데이터 로드"""
+    """특정 기간의 아카이브 데이터 로드 (Supabase 우선)"""
+    # 1. Supabase에서 조회
+    if supabase:
+        try:
+            response = supabase.table("archives").select("data").eq("period", period).execute()
+            if response.data:
+                return response.data[0]["data"]
+        except Exception as e:
+            print(f"⚠️ Supabase 상세 로드 실패: {e}")
+
+    # 2. 로컬 파일 보조
     return _load_archive(period)
 
 
