@@ -10,8 +10,8 @@ import {
     type ParseResponse,
     type CompanyInfo,
     type ApprovalStatus,
-} from "@/lib/api";
-import { formatCurrency } from "@/lib/format";
+} from "../../../lib/api";
+import { formatCurrency } from "../../../lib/format";
 import UploadZone from "@/components/UploadZone";
 
 const SESSION_KEY = "settlementData";
@@ -370,8 +370,8 @@ function BulkEmailModal({
                                     <div key={companyId} className="flex justify-between items-center py-2 border-b border-gray-100">
                                         <span className="text-[13px]">{company?.company || companyId}</span>
                                         <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${status === "sent"
-                                                ? "bg-green-100 text-green-700"
-                                                : "bg-red-100 text-red-700"
+                                            ? "bg-green-100 text-green-700"
+                                            : "bg-red-100 text-red-700"
                                             }`}>
                                             {status === "sent" ? "발송 완료" : status}
                                         </span>

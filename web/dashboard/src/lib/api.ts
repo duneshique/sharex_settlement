@@ -50,6 +50,14 @@ export interface ApprovalStatus {
     approved_by: string | null;
 }
 
+export interface EmailLogEntry {
+    sent_at: string;
+    recipient: string;
+    subject: string;
+    status: string;
+    pdf_filename: string;
+}
+
 export interface ParseResponse {
     period: string;
     extraction_date: string;
@@ -72,30 +80,17 @@ export async function parsePdf(file: File): Promise<ParseResponse> {
     const formData = new FormData();
     formData.append("file", file);
 
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 60000);
+    const res = await fetch(`${API_BASE}/api/settlements/parse`, {
+        method: "POST",
+        body: formData,
+    });
 
-    try {
-        const res = await fetch(`${API_BASE}/api/settlements/parse`, {
-            method: "POST",
-            body: formData,
-            signal: controller.signal,
-        });
-
-        if (!res.ok) {
-            const err = await res.json().catch(() => ({}));
-            throw new Error(err.detail || `API 에러 (${res.status}): ${res.statusText}`);
-        }
-
-        return await res.json();
-    } catch (error) {
-        if (error instanceof TypeError && error.message.includes("fetch")) {
-            throw new Error("API 서버 연결 실패");
-        }
-        throw error;
-    } finally {
-        clearTimeout(timeout);
+    if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.detail || `API 에러 (${res.status})`);
     }
+
+    return await res.json();
 }
 
 export async function saveArchive(data: any): Promise<any> {
@@ -126,12 +121,42 @@ export async function getApprovalStatus(period: string): Promise<any> {
     return res.json();
 }
 
+export async function approveCompany(period: string, companyId: string): Promise<any> {
+    const res = await fetch(`${API_BASE}/api/archive/${period}/approve/${companyId}`, {
+        method: "POST"
+    });
+    if (!res.ok) throw new Error("승인 실패");
+    return res.json();
+}
+
+export async function unapproveCompany(period: string, companyId: string): Promise<any> {
+    const res = await fetch(`${API_BASE}/api/archive/${period}/unapprove/${companyId}`, {
+        method: "POST"
+    });
+    if (!res.ok) throw new Error("승인 해제 실패");
+    return res.json();
+}
+
+export async function sendEmail(period: string, companyId: string): Promise<any> {
+    const res = await fetch(`${API_BASE}/api/settlements/send-email`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ period, company_id: companyId }),
+    });
+    if (!res.ok) throw new Error("이메일 발송 실패");
+    return res.json();
+}
+
 export async function sendBulkEmail(period: string, companyIds: string[]): Promise<any> {
     const res = await fetch(`${API_BASE}/api/settlements/send-bulk-email`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ period, company_ids: companyIds }),
     });
-    if (!res.ok) throw new Error("발송 실패");
+    if (!res.ok) throw new Error("일괄 발송 실패");
     return res.json();
+}
+
+export function getDownloadUrl(period: string, filename: string): string {
+    return `${API_BASE}/api/archive/${period}/download/${encodeURIComponent(filename)}`;
 }

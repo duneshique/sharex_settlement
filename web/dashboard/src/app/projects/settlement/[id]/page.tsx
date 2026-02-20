@@ -16,8 +16,8 @@ import {
     type CourseSummary,
     type ApprovalStatus,
     type EmailLogEntry,
-} from "@/lib/api";
-import { formatCurrency } from "@/lib/format";
+} from "../../../../lib/api";
+import { formatCurrency } from "../../../../lib/format";
 
 // ============================================================================
 // 플러스엑스 정보 (발신자 - PDF 양식과 동일)
@@ -568,11 +568,10 @@ export default function SettlementDetailPage() {
                         <button
                             onClick={handleStartEdit}
                             disabled={isApproved}
-                            className={`px-3 py-1 border border-gray-300 text-[11px] rounded-[2px] transition-colors ${
-                                isApproved
+                            className={`px-3 py-1 border border-gray-300 text-[11px] rounded-[2px] transition-colors ${isApproved
                                     ? "text-gray-300 cursor-not-allowed"
                                     : "text-gray-500 hover:bg-gray-50 hover:text-black"
-                            }`}
+                                }`}
                             title={isApproved ? "승인 해제 후 수정 가능" : undefined}
                         >
                             수정하기
@@ -662,11 +661,10 @@ export default function SettlementDetailPage() {
                 <div className="flex items-center justify-between mb-3">
                     <div className="text-[13px] font-bold">Remarks</div>
                     {saveMessage && (
-                        <div className={`text-[12px] ${
-                            saveMessage.includes("완료") || saveMessage === "저장되었습니다."
+                        <div className={`text-[12px] ${saveMessage.includes("완료") || saveMessage === "저장되었습니다."
                                 ? "text-green-600"
                                 : saveMessage.includes("실패") ? "text-red-500" : "text-blue-600"
-                        }`}>
+                            }`}>
                             {saveMessage}
                         </div>
                     )}
@@ -701,11 +699,10 @@ export default function SettlementDetailPage() {
                                     <td className="px-3 py-2">{log.recipient}</td>
                                     <td className="px-3 py-2 text-gray-500 truncate max-w-[200px]">{log.subject}</td>
                                     <td className="px-3 py-2 text-center">
-                                        <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
-                                            log.status === "sent"
+                                        <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${log.status === "sent"
                                                 ? "bg-green-100 text-green-700"
                                                 : "bg-red-100 text-red-700"
-                                        }`}>
+                                            }`}>
                                             {log.status === "sent" ? "발송" : "실패"}
                                         </span>
                                     </td>
